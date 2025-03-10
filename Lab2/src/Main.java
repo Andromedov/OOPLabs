@@ -38,7 +38,7 @@ public class Main {
     }
     public static void printByRoomsAndFloorsInRange(int newScanRooms, int scanFloor) {
         for (Apartment apartment : apartments) {
-            if (apartment.getRooms() == scanRooms && apartment.getFloor() >= scanFloor) {
+            if (apartment.getRooms() == newScanRooms && apartment.getFloor() >= scanFloor) {
                 System.out.println("По кімнатам та поверху: " + apartment);
             }
         }
