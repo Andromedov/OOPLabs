@@ -23,7 +23,7 @@ public class Main {
         int newScanRooms = scanner.nextInt();
         System.out.print("та на поверсі більше ніж: ");
         int scanFloor = scanner.nextInt();
-        printByRooms(scanRooms, scanFloor);
+        printByRoomsAndFloorsInRange(newScanRooms, scanFloor);
         System.out.print("Квартири з площею: ");
         double scanArea = scanner.nextDouble();
         printByArea(scanArea);

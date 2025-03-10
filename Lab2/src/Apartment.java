@@ -1,7 +1,7 @@
 public class Apartment {
     private int id;
     private int number;
-    private double quarters;
+    private double area;
     private int floor;
     private int rooms;
     private String street;
