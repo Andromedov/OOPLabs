@@ -22,8 +22,10 @@ public class Main {
         System.out.print("Квартири з кількістю кімнат: ");
         int newScanRooms = scanner.nextInt();
         System.out.print("та на поверсі більше ніж: ");
-        int scanFloor = scanner.nextInt();
-        printByRoomsAndFloorsInRange(newScanRooms, scanFloor);
+        int minScanFloor = scanner.nextInt();
+        System.out.print("та менше ніж: ");
+        int maxScanFloor = scanner.nextInt();
+        printByRoomsAndFloorsInRange(newScanRooms, minScanFloor, maxScanFloor);
         System.out.print("Квартири з площею: ");
         double scanArea = scanner.nextDouble();
         printByArea(scanArea);
@@ -36,9 +38,9 @@ public class Main {
             }
         }
     }
-    public static void printByRoomsAndFloorsInRange(int newScanRooms, int scanFloor) {
+    public static void printByRoomsAndFloorsInRange(int newScanRooms, int minScanFloor, int maxScanFloor) {
         for (Apartment apartment : apartments) {
-            if (apartment.getRooms() == newScanRooms && apartment.getFloor() >= scanFloor) {
+            if (apartment.getRooms() == newScanRooms && apartment.getFloor() >= minScanFloor && apartment.getFloor() <= maxScanFloor) {
                 System.out.println("По кімнатам та поверху: " + apartment);
             }
         }
