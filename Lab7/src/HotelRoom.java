@@ -1,4 +1,4 @@
-public class HotelRoom extends Property {
+public class HotelRoom extends Property implements Comparable<HotelRoom> {
     private Integer roomCount;
 
     public HotelRoom() {
@@ -35,5 +35,10 @@ public class HotelRoom extends Property {
                 super.toString() +
                 ", roomCount=" + roomCount +
                 '}';
+    }
+
+    @Override
+    public int compareTo(HotelRoom other) {
+        return this.roomCount.compareTo(other.roomCount);
     }
 }
