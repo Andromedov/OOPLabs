@@ -1,4 +1,4 @@
-public class Apartment extends Property {
+public class Apartment extends Property implements Comparable<Apartment> {
     private Double area;
     private Integer rooms;
     private static Integer counter = 0;
@@ -63,5 +63,10 @@ public class Apartment extends Property {
                 ", area=" + area +
                 ", rooms=" + rooms +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Apartment other) {
+        return this.area.compareTo(other.area);
     }
 }
